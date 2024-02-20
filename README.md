@@ -15,7 +15,7 @@ A secure and feature-rich notebook application built with the MERN stack (MongoD
 ### Version Control: (Potential future feature) Tracks changes made to notes over time, allowing users to revert to previous versions if needed.
 
 
-# Technologies:
+## Technologies:
 
 ## Frontend: React.js
 ## Backend: Node.js, Express.js, MongoDB
