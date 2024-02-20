@@ -33,4 +33,4 @@ A secure and feature-rich notebook application built with the MERN stack (MongoD
 ## Clone the repository:
 
 ## Bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Vishal2970/Rivision.git
