@@ -23,14 +23,4 @@ A secure and feature-rich notebook application built with the MERN stack (MongoD
 ## Authentication: (Provide details depending on implementation, e.g., JWT, cookies)
 
 
-# Installation:
-
-# Prerequisites:
-
-## Node.js (https://nodejs.org/)
-## npm or yarn (https://www.npmjs.com/, https://yarnpkg.com/)
-## MongoDB instance (local or cloud-based)
-## Clone the repository:
-
-## Bash
-git clone https://github.com/Vishal2970/Rivision.git
+# git clone https://github.com/Vishal2970/Rivision.git
