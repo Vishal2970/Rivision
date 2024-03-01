@@ -5,7 +5,11 @@
     justify-content: space-between;
 }
 
-.ul{
+ul{
     display: flex;
     gap: 3.2em;
+}
+
+li{
+    list-style: none;
 }
