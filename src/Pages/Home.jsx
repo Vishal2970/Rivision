@@ -26,7 +26,7 @@ export const Home = () => {
                 <a className='home-btn' href="/contact">
                   <button className="btn">Connect now</button>
                 </a>
-                <a className='home-btn' href="/services">
+                <a className='home-btn' href="/service">
                   <button className="btn">Learn More</button>
                 </a>
               </div>
