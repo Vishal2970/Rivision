@@ -1,20 +1,20 @@
 import { useState } from "react";
 
 export const Contact = () => {
-  const [user, setUser] = useState({
+  const [contact, setContact] = useState({
     email: "",
     phone: "",
     message: "",
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+    console.log(contact);
   };
   const handleInput = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-    setUser({
-      ...user,
+    setContact({
+      ...contact,
       [name]: value,
     });
   };
@@ -46,7 +46,7 @@ export const Contact = () => {
                       id="email"
                       required
                       autoComplete="off"
-                      value={user.email}
+                      value={contact.email}
                       onChange={handleInput}
                     />
                   </div>
@@ -59,20 +59,21 @@ export const Contact = () => {
                       id="phone"
                       required
                       autoComplete="off"
-                      value={user.phone}
+                      value={contact.phone}
                       onChange={handleInput}
                     />
                   </div>
                   <div>
                     <label htmlFor="message">message</label>
-                    <input
-                      type="text"
+                    <textarea
+                      // type="text"
                       name="message"
                       placeholder="Enter your message"
                       id="message"
                       required
-                      autoComplete="off"
-                      value={user.message}
+                      cols={30}
+                      rows={5}
+                      value={contact.message}
                       onChange={handleInput}
                     />
                   </div>
