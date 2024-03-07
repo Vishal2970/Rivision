@@ -8,7 +8,7 @@ export const Register = () => {
     phone: "",
     password: "",
   });
-const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(user);
@@ -20,14 +20,14 @@ const navigate=useNavigate();
         },
         body: JSON.stringify(user),
       });
-     if(response.ok){
+      if (response.ok) {
         navigate("/login");
         alert("Registration successfull");
-     }
+      }
     } catch (error) {
-      setUser({username: "",email: "",phone: "",password: ""})
+      setUser({ username: "", email: "", phone: "", password: "" });
       alert("Invalid credintial");
-        // console.log("register",error);
+      // console.log("register",error);
     }
   };
 
@@ -118,9 +118,14 @@ const navigate=useNavigate();
                   </button>
                 </form>
                 <div className="container">
-                <h1>Already registed ?</h1>
-                <button type="login" className="btn btn-login" onClick={() => navigate("/login")}>
-                  Login Now</button>
+                  <h1>Already registed ?</h1>
+                  <button
+                    type="login"
+                    className="btn btn-login"
+                    onClick={() => navigate("/login")}
+                  >
+                    Login Now
+                  </button>
                 </div>
               </div>
             </div>
