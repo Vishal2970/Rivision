@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -7,7 +8,7 @@ export const Register = () => {
     phone: "",
     password: "",
   });
-
+const navigate=useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(user);
@@ -20,11 +21,13 @@ export const Register = () => {
         body: JSON.stringify(user),
       });
      if(response.ok){
-        setUser({username: "",email: "",phone: "",password: ""})
-        alert("Successful");
+        navigate("/login");
+        alert("Registration successfull");
      }
     } catch (error) {
-        console.log("register",error);
+      setUser({username: "",email: "",phone: "",password: ""})
+      alert("Invalid credintial");
+        // console.log("register",error);
     }
   };
 
@@ -114,6 +117,11 @@ export const Register = () => {
                     Register Now
                   </button>
                 </form>
+                <div className="container">
+                <h1>Already registed ?</h1>
+                <button type="login" className="btn btn-login" onClick={() => navigate("/login")}>
+                  Login Now</button>
+                </div>
               </div>
             </div>
           </div>

@@ -1,19 +1,41 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
+const URL = "http://localhost:5000/api/auth/login";
 export const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user);
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      if (response.ok) {
+        // setUser({email: "",password: ""})
+        // alert("login successfull");
+        navigate("/");
+      } else {
+        setUser({ email: "", password: "" });
+        alert("Invalid Credential");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
   const handleInput = (e) => {
     // console.log(e);
     let name = e.target.name;
     let value = e.target.value;
-    console.log(value);
+    // console.log(value);
     setUser({
       ...user,
       [name]: value,
@@ -68,6 +90,16 @@ export const Login = () => {
                     Login Now
                   </button>
                 </form>
+                <div className="container">
+                  <h1>Not registed ?</h1>
+                  <button
+                    type="register"
+                    className="btn btn-register"
+                    onClick={() => navigate("/register")}
+                  >
+                    Register Now
+                  </button>
+                </div>
               </div>
             </div>
           </div>
