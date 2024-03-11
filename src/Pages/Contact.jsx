@@ -25,12 +25,12 @@ export const Contact = () => {
           <div className="section-contactUs">
             <div className="container grid grid-two-cols">
               <div className="login-image">
-              <img
-                src="/Image/contact-us.png"
-                alt="contact-us"
-                width={800}
-                height={500}
-              />
+                <img
+                  src="/Image/contact-us.png"
+                  alt="contact-us"
+                  width={800}
+                  height={500}
+                />
               </div>
               <div className="contactUs-form">
                 <h1 className="main-heading mb-3">Contact Me</h1>

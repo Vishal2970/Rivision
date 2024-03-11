@@ -11,19 +11,24 @@ export const Home = () => {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
                 ducimus aut a mollitia reiciendis dolore sapiente accusamus
                 dicta impedit quas, assumenda iure quaerat dolores itaque,
-                </p>
+              </p>
               <div className="btn btn-group">
-                <a className='home-btn' href="/contact">
+                <a className="home-btn" href="/contact">
                   <button className="btn">Connect now</button>
                 </a>
-                <a className='home-btn' href="/service">
+                <a className="home-btn" href="/service">
                   <button className="btn">Learn More</button>
                 </a>
               </div>
             </div>
-{/* Images */}
+            {/* Images */}
             <div className="hero-image">
-                <img src="/Image/TR00081.jpg" alt="Home-pic" width={400} height={400}/>
+              <img
+                src="/Image/TR00081.jpg"
+                alt="Home-pic"
+                width={400}
+                height={400}
+              />
             </div>
           </div>
         </section>

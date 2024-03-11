@@ -230,7 +230,7 @@ a.active {
   }
   & .contact-img {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     & img {
       width: 80%;
