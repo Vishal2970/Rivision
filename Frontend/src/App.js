@@ -5,7 +5,7 @@ import { Contact } from "./Pages/Contact";
 import { Service } from "./Pages/Service";
 import { Register } from "./Pages/Register";
 import { Login } from "./Pages/Login";
-import { Navbar } from "./Components/Navbar";
+import { Navbar } from "./Components/Navbar"; 
 
 const App = () => {
   return (
