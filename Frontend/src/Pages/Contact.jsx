@@ -6,14 +6,9 @@ export const Contact = () => {
     phone: "",
     message: "",
   });
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(contact);
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(contact);
+    // console.log(contact);
     try {
       const response = await fetch(`http://localhost:5000/api/form/contact`, {
         method: "POST",
@@ -22,23 +17,15 @@ export const Contact = () => {
         },
         body: JSON.stringify(contact),
       });
-      console.log(response);
       if (response.ok) {
+        setContact({ email: "", phone: "", message: "" });
         alert("message sent successfully");
       }
-    } catch (error) {
-      setContact({email: "",phone: "",message: "", });
+    } catch (error) {      
       alert("Rety Please");
       // console.log("register",error);
     }
   };
-
-
-
-
-
-
-
   const handleInput = (e) => {
     let name = e.target.name;
     let value = e.target.value;
