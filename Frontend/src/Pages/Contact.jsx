@@ -21,7 +21,7 @@ export const Contact = () => {
         setContact({ email: "", phone: "", message: "" });
         alert("message sent successfully");
       }
-    } catch (error) {      
+    } catch (error) {
       alert("Rety Please");
       // console.log("register",error);
     }

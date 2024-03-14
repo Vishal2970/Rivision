@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import "./Navbar.css";
+import { Checkboxes } from "../Pages/Checkboxes";
 
 export const Navbar =() => {
     return(
@@ -17,6 +18,7 @@ export const Navbar =() => {
                     <li> <NavLink to="/service">Service</NavLink></li>
                     <li> <NavLink to="/login">Login</NavLink></li>
                     <li> <NavLink to="/register">Register</NavLink></li>
+                    <li><Checkboxes/></li>
                 </ul>
             </nav>
         </div>
