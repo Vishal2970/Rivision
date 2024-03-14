@@ -108,3 +108,33 @@ export const Login = () => {
     </>
   );
 };
+
+
+
+
+
+// for defaut password login
+
+// if (response.ok) {
+//   // Login successful, navigate to homepage
+//   navigate("/");
+// } else {
+//   const errorData = await response.json(); // Parse error details
+//   console.log(errorData.msg);
+//   if (errorData.msg === "Invalid Credintial") {
+//     // Check for default password
+//     console.log("enter");
+//     if (user.password === DEFAULT_PASSWORD) {
+//       alert("You're using the default password. Please set a new, secure password.");
+//       // Redirect to password reset page or handle password change here
+//     } else {
+//       // Handle invalid non-default password
+//       setUser({ email: "", password: "" });
+//       alert("Invalid username or password.");
+//     }
+//   } else {
+//     // Handle other errors (e.g., server error)
+//     console.error("Login error:", errorData.message);
+//     alert("An error occurred. Please try again later.");
+//   }
+// }
